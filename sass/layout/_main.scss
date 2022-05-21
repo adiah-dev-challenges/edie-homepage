@@ -5,6 +5,11 @@
 	&__tag {
 		font-size: 0.625rem;
 		color: var(--clr-faint);
+
+		@include abs.breakpoint(large) {
+			font-size: 0.875rem;
+			margin-bottom: 0.5rem;
+		}
 	}
 	&__inputs {
 		display: flex;
@@ -21,6 +26,10 @@
 		border: 0;
 		margin-left: 1rem;
 
+		@include abs.breakpoint(large) {
+			font-size: 1.125rem;
+		}
+
 		&:focus {
 			outline: none;
 		}
@@ -32,11 +41,15 @@
 
 	&__submit {
 		border: 0;
-		padding: 0.75rem 1.25rem;
+		padding: 0.85em 1.43em;
 		border-radius: 0.75rem;
 		color: #fff;
 		background-color: var(--clr-blue);
 		font-size: 0.875rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 1.125rem;
+		}
 	}
 }
 

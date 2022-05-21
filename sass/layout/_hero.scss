@@ -3,23 +3,44 @@
 .hero {
 	margin-top: 2rem;
 	width: 93%;
+	max-width: abs.rem(1332);
 	margin-inline: auto;
 	margin-bottom: 7.5rem;
+
+	@include abs.breakpoint(large) {
+		margin-top: 5rem;
+		margin-bottom: 12.5rem;
+	}
 
 	// Header on top the image
 	&__top {
 		width: 80%;
 		margin-left: 10%;
 		margin-bottom: 1rem;
+
+		@include abs.breakpoint(large) {
+			margin-left: 17%;
+			margin-bottom: 2.625rem;
+			width: 45%;
+		}
 	}
 
 	&__tag {
 		font-size: 0.75rem;
 		color: var(--clr-blue);
+
+		@include abs.breakpoint(large) {
+			font-size: 1.125rem;
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__title {
 		font-size: 1.5rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 3rem;
+		}
 	}
 
 	&__img {
@@ -31,17 +52,34 @@
 	&__bottom {
 		width: 78%;
 		margin-left: 10%;
+
+		@include abs.breakpoint(large) {
+			margin-left: 17%;
+			width: 30%;
+			max-width: abs.rem(350);
+		}
 	}
 
 	&__subtitle {
 		font-size: 1.5rem;
 		width: 78%;
 		margin-bottom: 2rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 3rem;
+			width: 100%;
+			margin-bottom: 2.625rem;
+		}
 	}
 
 	&__body {
 		font-size: 0.75rem;
 		color: var(--clr-text-gray);
 		margin-bottom: 2rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 1.125rem;
+			margin-bottom: 2.625rem;
+		}
 	}
 }
