@@ -1,29 +1,5 @@
 @use '../abstracts' as abs;
 
-header {
-	@include abs.breakpoint(large) {
-		width: 66%;
-		max-width: abs.rem(960);
-		margin-inline: auto;
-	}
-
-	.title {
-		margin-top: 2rem;
-		margin-bottom: 1.25rem;
-		margin-left: 1.125rem;
-		font-size: 1.5rem;
-		color: var(--clr-dark-gray);
-
-		@include abs.breakpoint(large) {
-			margin-top: 2rem;
-			margin-left: 0;
-			margin-bottom: 3.25rem;
-			font-size: 2.25rem;
-		}
-	}
-}
-
-
 .checkout {
 	display: flex;
 	flex-direction: column;

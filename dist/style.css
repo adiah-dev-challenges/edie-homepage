@@ -1,12 +1,15 @@
 :root {
   --clr-dark: #333333;
-  --clr-dark-gray: #4e5150;
+  --clr-text-gray: #4f4f4f;
+  --clr-faint: #828282;
   --clr-light: #fff;
-  --clr-orange: #f2994a;
-  --clr-placeholder: #828282;
-  --clr-label: #4f4f4f;
   --clr-gray-bg: #f2f2f2;
-  --ff-sans: "Montserrat", sans-serif;
+  --clr-blue: #2d9cdb;
+  --clr-green: #27ae60;
+  --clr-pink: #eb5757;
+  --ff-sans: "Poppins", sans-serif;
+  --ff-footer: "Montserrat", sans-serif;
+  --ff-logo: "Heebo", sans-serif;
   --fs-300: 0.625rem;
   --fs-400: 0.75rem;
   --fs-500: 0.875rem;
@@ -50,7 +53,7 @@ p {
 body {
   font-family: var(--ff-sans);
   font-size: var(--fs-400);
-  font-weight: 600;
+  font-weight: 500;
   background-color: var(--clr-light);
   color: var(--clr-dark);
   line-height: 1.5;
@@ -86,26 +89,76 @@ select {
     scroll-behavior: auto !important;
   }
 }
-@media (min-width: 56.25em) {
-  header {
-    width: 66%;
-    max-width: 60rem;
+.primary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+@media (min-width: 43.75em) {
+  .primary-header {
     margin-inline: auto;
+    margin-top: 2.625rem;
+    width: 93%;
   }
 }
-header .title {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-  margin-left: 1.125rem;
+.primary-header__logo {
+  text-decoration: none;
+  font-family: var(--ff-logo);
+  font-weight: 800;
+  color: var(--clr-dark);
   font-size: 1.5rem;
-  color: var(--clr-dark-gray);
 }
 @media (min-width: 56.25em) {
-  header .title {
-    margin-top: 2rem;
-    margin-left: 0;
-    margin-bottom: 3.25rem;
+  .primary-header__logo {
     font-size: 2.25rem;
+  }
+}
+
+.primary-navigation {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.primary-navigation .nav-link {
+  text-decoration: none;
+  color: var(--clr-dark);
+  font-size: 1.5rem;
+}
+@media (max-width: 43.74875em) {
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+    height: 100vh;
+    background-color: pink;
+  }
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+@media (max-width: 43.74875em) {
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    z-index: 2000;
+    background: transparent;
+    margin-left: auto;
+    border: 0;
+  }
+  .mobile-nav-toggle:focus-visible {
+    outline: 5px solid var(--clr-faint);
+    outline-offset: 5px;
   }
 }
 
