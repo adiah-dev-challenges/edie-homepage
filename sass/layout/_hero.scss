@@ -1,0 +1,47 @@
+@use '../abstracts/' as abs;
+
+.hero {
+	margin-top: 2rem;
+	width: 93%;
+	margin-inline: auto;
+	margin-bottom: 7.5rem;
+
+	// Header on top the image
+	&__top {
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 1rem;
+	}
+
+	&__tag {
+		font-size: 0.75rem;
+		color: var(--clr-blue);
+	}
+
+	&__title {
+		font-size: 1.5rem;
+	}
+
+	&__img {
+		border-radius: 1.125rem;
+		margin-bottom: 1.375rem;
+	}
+
+	// Below the image
+	&__bottom {
+		width: 78%;
+		margin-left: 10%;
+	}
+
+	&__subtitle {
+		font-size: 1.5rem;
+		width: 78%;
+		margin-bottom: 2rem;
+	}
+
+	&__body {
+		font-size: 0.75rem;
+		color: var(--clr-text-gray);
+		margin-bottom: 2rem;
+	}
+}
