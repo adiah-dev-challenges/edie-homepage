@@ -1,8 +1,16 @@
 @use '../abstracts/' as abs;
 
 .portfolio {
+	display: flex;
+	flex-direction: column;
 	margin-inline: 0.75rem;
 	margin-bottom: 6.25rem;
+
+	@include abs.breakpoint(large) {
+		width: 78%;
+		margin-inline: auto;
+		margin-bottom: 15.0625rem;
+	}
 
 	&__title {
 		width: 75%;
@@ -10,6 +18,13 @@
 		margin-left: 2rem;
 		margin-bottom: 3rem;
 		font-size: 1.5rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 2.25rem;
+			margin-left: 0;
+			margin-bottom: 0.5rem;
+			width: 40%;
+		}
 	}
 
 	&__container {
@@ -17,9 +32,30 @@
 		flex-direction: column;
 		gap: 2.25rem;
 		margin-bottom: 2.25rem;
+
+		@include abs.breakpoint(large) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			gap: 0 1.25rem;
+			margin-bottom: 0;
+		}
 	}
 
 	&-item {
+
+		@include abs.breakpoint(large) {
+
+			// height: 75%;
+
+			&:first-child,
+			&:nth-child(3) {
+				// align-self: flex-end;
+				margin-top: 8.5em;
+			}
+
+		}
+
 		&__img {
 			border-radius: 1.5rem;
 			margin-bottom: 1rem;
@@ -29,10 +65,18 @@
 			font-size: 0.75rem;
 			font-weight: 300;
 			color: var(--clr-faint);
+
+			@include abs.breakpoint(large) {
+				font-size: 0.875rem;
+			}
 		}
 
 		&__name {
 			font-size: 1.125rem;
+
+			@include abs.breakpoint(large) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 
@@ -42,5 +86,10 @@
 		text-decoration: none;
 		color: var(--clr-blue);
 		font-size: 1.125rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 1.5rem;
+			margin-left: auto;
+		}
 	}
 }

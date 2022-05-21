@@ -319,8 +319,17 @@ select {
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
   margin-inline: 0.75rem;
   margin-bottom: 6.25rem;
+}
+@media (min-width: 56.25em) {
+  .portfolio {
+    width: 78%;
+    margin-inline: auto;
+    margin-bottom: 15.0625rem;
+  }
 }
 .portfolio__title {
   width: 75%;
@@ -328,11 +337,33 @@ select {
   margin-bottom: 3rem;
   font-size: 1.5rem;
 }
+@media (min-width: 56.25em) {
+  .portfolio__title {
+    font-size: 2.25rem;
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    width: 40%;
+  }
+}
 .portfolio__container {
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
   margin-bottom: 2.25rem;
+}
+@media (min-width: 56.25em) {
+  .portfolio__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 1.25rem;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 56.25em) {
+  .portfolio-item:first-child, .portfolio-item:nth-child(3) {
+    margin-top: 8.5em;
+  }
 }
 .portfolio-item__img {
   border-radius: 1.5rem;
@@ -343,8 +374,18 @@ select {
   font-weight: 300;
   color: var(--clr-faint);
 }
+@media (min-width: 56.25em) {
+  .portfolio-item__tag {
+    font-size: 0.875rem;
+  }
+}
 .portfolio-item__name {
   font-size: 1.125rem;
+}
+@media (min-width: 56.25em) {
+  .portfolio-item__name {
+    font-size: 1.5rem;
+  }
 }
 .portfolio__link {
   display: flex;
@@ -352,6 +393,12 @@ select {
   text-decoration: none;
   color: var(--clr-blue);
   font-size: 1.125rem;
+}
+@media (min-width: 56.25em) {
+  .portfolio__link {
+    font-size: 1.5rem;
+    margin-left: auto;
+  }
 }
 
 .services {
