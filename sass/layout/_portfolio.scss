@@ -1,0 +1,46 @@
+@use '../abstracts/' as abs;
+
+.portfolio {
+	margin-inline: 0.75rem;
+	margin-bottom: 6.25rem;
+
+	&__title {
+		width: 75%;
+		// margin-inline: auto;
+		margin-left: 2rem;
+		margin-bottom: 3rem;
+		font-size: 1.5rem;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 2.25rem;
+		margin-bottom: 2.25rem;
+	}
+
+	&-item {
+		&__img {
+			border-radius: 1.5rem;
+			margin-bottom: 1rem;
+		}
+
+		&__tag {
+			font-size: 0.75rem;
+			font-weight: 300;
+			color: var(--clr-faint);
+		}
+
+		&__name {
+			font-size: 1.125rem;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: var(--clr-blue);
+		font-size: 1.125rem;
+	}
+}
