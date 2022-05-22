@@ -45,7 +45,9 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 - [x] Page follows the given design
 - [x] Mobile page follows the given design
-- [ ] Can go to certain locations by selecting links in navigation or footer
+- [x] Can go to certain locations by selecting links in navigation or footer
+- [ ] Can use mobile menu for navigation
+  Right now the close button is linked to the header.
 
 ## How To Use
 
