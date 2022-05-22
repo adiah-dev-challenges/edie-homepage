@@ -7,6 +7,22 @@
 	margin-inline: 1rem;
 	margin-bottom: 6.25rem;
 
+	@include abs.breakpoint(large) {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 0;
+		width: 77%;
+		margin-inline: auto;
+		max-width: abs.rem(1103);
+	}
+
+	&__text {
+		@include abs.breakpoint(large) {
+			width: 30%;
+			max-width: abs.rem(280);
+		}
+	}
+
 	&__tag {
 		color: var(--clr-pink);
 		font-size: 1.125rem;
@@ -32,6 +48,10 @@
 		grid-template-areas: 
 			'one two'
 			'one three' ;
+
+		@include abs.breakpoint(large) {
+			width: 58%;
+		}
 	}
 
 	&__img {

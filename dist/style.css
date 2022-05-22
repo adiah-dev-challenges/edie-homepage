@@ -493,6 +493,22 @@ select {
   margin-inline: 1rem;
   margin-bottom: 6.25rem;
 }
+@media (min-width: 56.25em) {
+  .team {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    width: 77%;
+    margin-inline: auto;
+    max-width: 68.9375rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .team__text {
+    width: 30%;
+    max-width: 17.5rem;
+  }
+}
 .team__tag {
   color: var(--clr-pink);
   font-size: 1.125rem;
@@ -513,6 +529,11 @@ select {
   grid-template-rows: 0.47fr 0.53fr;
   gap: 0.5rem;
   grid-template-areas: "one two" "one three";
+}
+@media (min-width: 56.25em) {
+  .team__gallery {
+    width: 58%;
+  }
 }
 .team__img {
   border-radius: 1.5rem;
