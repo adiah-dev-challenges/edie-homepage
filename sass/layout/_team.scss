@@ -1,0 +1,53 @@
+@use '../abstracts/' as abs;
+
+.team {
+	display: flex;
+	flex-direction: column;
+	gap: 2.25rem;
+	margin-inline: 1rem;
+	margin-bottom: 6.25rem;
+
+	&__tag {
+		color: var(--clr-pink);
+		font-size: 1.125rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__title {
+		font-size: 2.25rem;
+		width: 82%;
+		margin-bottom: 0.875rem;
+	}
+
+	&__description {
+		color: var(--clr-text-gray);
+		font-size: 1rem;
+	}
+
+	&__gallery {
+		display: grid;
+		grid-template-columns: 0.52fr 0.48fr;
+		grid-template-rows: 0.47fr 0.53fr;
+		gap: 0.5rem;
+		grid-template-areas: 
+			'one two'
+			'one three' ;
+	}
+
+	&__img {
+		border-radius: 1.5rem;
+
+		&:first-child {
+			grid-area: one;
+			align-self: center;
+		}
+
+		&:nth-child(2) {
+			grid-area: two;
+		}
+
+		&:last-child {
+			grid-area: three;
+		}
+	}
+}

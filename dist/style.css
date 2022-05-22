@@ -486,6 +486,48 @@ select {
   border-radius: 0.75rem;
 }
 
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-inline: 1rem;
+  margin-bottom: 6.25rem;
+}
+.team__tag {
+  color: var(--clr-pink);
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+.team__title {
+  font-size: 2.25rem;
+  width: 82%;
+  margin-bottom: 0.875rem;
+}
+.team__description {
+  color: var(--clr-text-gray);
+  font-size: 1rem;
+}
+.team__gallery {
+  display: grid;
+  grid-template-columns: 0.52fr 0.48fr;
+  grid-template-rows: 0.47fr 0.53fr;
+  gap: 0.5rem;
+  grid-template-areas: "one two" "one three";
+}
+.team__img {
+  border-radius: 1.5rem;
+}
+.team__img:first-child {
+  grid-area: one;
+  align-self: center;
+}
+.team__img:nth-child(2) {
+  grid-area: two;
+}
+.team__img:last-child {
+  grid-area: three;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
