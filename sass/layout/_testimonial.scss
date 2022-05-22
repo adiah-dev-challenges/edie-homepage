@@ -1,0 +1,55 @@
+@use '../abstracts/' as abs;
+
+.testimonial {
+	margin-inline: 0.625rem;
+	margin-bottom: 6.25rem;
+
+	@include abs.breakpoint(large) {
+		width: 65%;
+		max-width: abs.rem(940);
+		margin-inline-start: 11%;
+		margin-bottom: 12.5rem;
+	}
+
+	&__body {
+		font-size: 1.5rem;
+		margin-bottom: 1.6875rem;
+
+		@include abs.breakpoint(large) {
+			font-size: 2.25rem;
+		}
+	}
+
+	&-profile {
+		display: grid;
+		grid-template-columns: 0.23fr 0.77fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 0.75rem 1.875rem;
+		grid-template-areas: 
+			'pic name'
+			'pic role';
+
+		@include abs.breakpoint(large) {
+			width: 40%;
+		}
+
+		&__img {
+			grid-area: pic;
+			border-radius: 0.75rem;
+			align-self: center;
+		}
+
+		&__name {
+			grid-area: name;
+			font-size: 1.5rem;
+			line-height: 1;
+			align-self: flex-end;
+		}
+
+		&__role {
+			grid-area: role;
+			font-size: 1.125rem;
+			color: var(--clr-faint);
+		}
+	}
+}
