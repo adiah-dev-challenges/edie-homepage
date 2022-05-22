@@ -44,8 +44,8 @@
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0) was to build an application to complete the given user stories.
 
 - [x] Page follows the given design
-- [ ] User can input email, phone, full name, address, city, country and postal code
-- [ ] User can input the number of items
+- [x] Mobile page follows the given design
+- [ ] Can go to certain locations by selecting links in navigation or footer
 
 ## How To Use
 
